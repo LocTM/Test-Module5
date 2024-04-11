@@ -31,16 +31,17 @@ export default function Update() {
     }
 
     return (
+
         <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
             <div className='w-50 border bg-dark-subtle bg-gradient text-black p-5'>
+                <h2>Sửa sản phẩm</h2>
                 <form onSubmit={handleUpdate}>
-                    <h2>Sửa sản phẩm</h2>
                     <br/>
                     <br/>
                     <div>
                         <label htmlFor="title">Tên sản phẩm:</label>
                         <input type="text" name='title' className='form-control'
-                               value={product.title}
+                               value= {product.title}
                                onChange={event =>
                                    setProduct({...product, [event.target.name]: event.target.value})
                                }
@@ -65,7 +66,7 @@ export default function Update() {
                         />
                     </div>
                     <div className='mt-3 d-flex justify-content-center'>
-                        <button className='mx-1 btn btn-success'>Sửa</button>
+                        <button className='mx-1 btn btn-warning'>Sửa</button>
                         <Link to='/' className='mx-1 btn btn-primary'>Trở lại</Link>
                     </div>
                 </form>
